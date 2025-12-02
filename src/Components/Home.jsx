@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BiRightArrowAlt } from "react-icons/bi";
+import Footer from './Footer';
 
 const Home = () => {
   return (
@@ -35,14 +37,41 @@ const Home = () => {
 
 
         {/* Why Choose Us? */}
-        <div className='mt-40'>
+        <div className='mt-40 flex flex-col gap-12'>
           <h1 className='text-3xl font-bold'>Why Choose Us?</h1>
 
-          <div>
-            <div className='w-30 h-10 border-2'></div>
+          <div className='flex justify-between'>
+            <div className='w-[370px] h-[133px] border-2 border-gray-200 rounded-xl p-5'>
+              <div className='flex flex-col gap-3'>
+                <h2 className='text-xl font-bold'>Multiple Sources</h2>
+                <p className='text-[17px] text-gray-600'>Products from various trusted APIs and sources combined in one place.</p>
+              </div>
+            </div>
+            <div className='w-[370px] h-[133px] border-2 border-gray-200 rounded-xl p-5'>
+              <div className='flex flex-col gap-3'>
+                <h2 className='text-xl font-bold'>Easy Management</h2>
+                <p className='text-[17px] text-gray-600'>Add, edit, delete, and manage products with a simple interface.
+
+                </p>
+              </div>
+            </div>
+            <div className='w-[370px] h-[133px] border-2 border-gray-200 rounded-xl p-5'>
+              <div className='flex flex-col gap-3'>
+                <h2 className='text-xl font-bold'>Smart Cart</h2>
+                <p className='text-[17px] text-gray-600'>Add items to cart, adjust quantities, and track your purchases effortlessly.</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Ready to Start Shopping? */}
+        <div className='w-full h-[260px] bg-gradient-to-r from-[#e6dfff] via-[#f5e6ff] to-[#ffd6d9] mt-40 rounded-xl mb-20 flex flex-col justify-center items-center gap-5'>
+          <h1 className='text-3xl font-bold'>Ready to Start Shopping?</h1>
+          <p className='text-[18px] text-gray-600'>Explore our complete collection of products today.</p>
+          <Link to="/products" className='w-[226px] h-12 bg-blue-700 font-semibold text-white flex justify-center items-center rounded-xl gap-2'>View All Products <BiRightArrowAlt className='text-[22px] relative top-[1px]'/></Link>
+        </div>
       </section>
+      <Footer />
     </div>
   )
 }
